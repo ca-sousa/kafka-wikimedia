@@ -27,6 +27,11 @@ public class wikimediaChangesProducer {
         properties.setProperty(ProducerConfig.ACKS_CONFIG, "all");  //appears as -1
         properties.setProperty(ProducerConfig.RETRIES_CONFIG, Integer.toString(Integer.MAX_VALUE));
 
+        // configs to improve kafka performance (Throughput)
+        properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
+        properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, "all");
+        properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
+
         // create Producer
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
