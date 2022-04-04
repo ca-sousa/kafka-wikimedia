@@ -1,6 +1,6 @@
-/.gradle
-/gradle
-/build
+.gradle
+gradle
+build
 
 ### IntelliJ IDEA ###
 .idea
