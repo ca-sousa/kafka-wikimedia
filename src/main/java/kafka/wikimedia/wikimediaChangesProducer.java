@@ -29,7 +29,7 @@ public class wikimediaChangesProducer {
 
         // configs to improve kafka performance (Throughput)
         properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
-        properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, "all");
+        properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, "32000");
         properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
 
         // create Producer
